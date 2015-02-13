@@ -17,15 +17,27 @@ int main(int argc, char** argv) {
     rRicorsivo = potenzaIterativa(base, esponente);
     
     printf("%d^%d = %d (formulazione iterativa)\n", base, esponente, rIterativo);
-    printf("%d^%d = %d (formulazione iterativa)\n", base, esponente, rRicorsivo);
+    printf("%d^%d = %d (formulazione ricorsiva)\n", base, esponente, rRicorsivo);
     return (EXIT_SUCCESS);
 }
 
 int potenzaIterativa(int base, int esponente) {
-    // TODO Implementa il corpo della funzione
-    return -1;
+    int ris;
+    for(ris=1; esponente>0; esponente--)
+    {
+             ris = ris * base;  
+    }
+    return ris;
 }
-int potenzaIterativa(int base, int esponente) {
-    // TODO Implementa il corpo della funzione
-    return -1;
+int potenzaRicorsiva(int base, int esponente) {
+    int ris;
+    if (esponente==0)
+    {
+       return ris;        
+    }
+    else
+    {
+        ris = base*potenzaIterativa(base, esponente-1);
+        return ris;
+    }
 }
