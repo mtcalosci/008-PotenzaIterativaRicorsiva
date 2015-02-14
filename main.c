@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
     scanf("%d", &esponente);
     
     rIterativo = potenzaIterativa(base, esponente);
-    rRicorsivo = potenzaIterativa(base, esponente);
+    rRicorsivo = potenzaRicorsiva(base, esponente);
     
     printf("%d^%d = %d (formulazione iterativa)\n", base, esponente, rIterativo);
     printf("%d^%d = %d (formulazione ricorsiva)\n", base, esponente, rRicorsivo);
