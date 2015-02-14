@@ -37,7 +37,7 @@ int potenzaRicorsiva(int base, int esponente) {
     }
     else
     {
-        ris = base*potenzaIterativa(base, esponente-1);
+        ris = base*potenzaRicorsiva(base, esponente-1);
         return ris;
     }
 }
