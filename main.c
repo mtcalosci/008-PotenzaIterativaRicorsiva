@@ -29,15 +29,15 @@ int potenzaIterativa(int base, int esponente) {
     }
     return ris;
 }
-int potenzaRicorsiva(int base, int esponente) {
-    int ris;
+int potenzaRicorsiva(int base , int esponente) {
+    int ris=1;
     if (esponente==0)
     {
        return ris;        
     }
     else
     {
-        ris = base*potenzaRicorsiva(base, esponente-1);
-        return ris;
+        ris = base * potenzaRicorsiva(base , esponente-1); 
+        
     }
 }
